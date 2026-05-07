@@ -79,7 +79,7 @@ git diff --staged
 
 ### 步骤 5：编写提交信息
 
-格式遵循 [Conventional Commits](https://www.conventionalcommits.org/)：
+格式遵循 [Conventional Commits](https://www.conventionalcommits.org/)，**提交信息使用中文**：
 
 ```
 <type>(<scope>): <subject>
@@ -90,31 +90,42 @@ git diff --staged
 ```
 
 **规则：**
-- `subject`：祈使句，首字母小写，不加句号，不超过 72 个字符
+- `subject`：中文祈使句，不加句号，不超过 72 个字符
 - `scope`：可选，括号括起，指明影响范围（如模块名、包名、文件名）
-- `body`：可选，解释"为什么这样做"，而不是"做了什么"
+- `body`：可选，解释"为什么这样做"，而不是"做了什么"，使用中文
 - `footer`：可选，引用 Issue（`Closes #123`）或声明破坏性变更（`BREAKING CHANGE: ...`）
 
 **示例：**
 
 ```
-feat(user): add email verification on registration
+feat(用户): 新增注册时邮箱验证流程
 
-Adds a verification step to prevent fake account creation.
-Users receive an email link valid for 24 hours.
+增加验证步骤以防止虚假账号注册。
+用户将收到有效期为 24 小时的验证邮件链接。
 
 Closes #42
 ```
 
 ```
-fix(payment): handle nil pointer when order amount is zero
+fix(支付): 修复订单金额为零时的空指针异常
 ```
 
 ```
-refactor(repo): extract common query builder to shared util
+refactor(仓储层): 提取通用查询构建器到共享工具类
 ```
 
-### 步骤 6：执行提交
+### 步骤 6：确认并执行提交
+
+**在执行提交前，必须向用户展示生成的提交信息并询问确认：**
+
+> 📋 **即将提交，请确认以下信息：**
+>
+> - 暂存文件列表（`git diff --staged --name-only` 输出）
+> - 提交信息：`<生成的 commit message>`
+>
+> **是否确认提交？（yes/no）**
+
+用户确认后再执行：
 
 ```bash
 # 单行提交信息
@@ -124,11 +135,24 @@ git commit -m "<type>(<scope>): <subject>"
 git commit
 ```
 
+若用户拒绝或要求修改，重新生成提交信息后再次确认。
+
 ---
 
 ## 阶段四：推送（可选）
 
-### 步骤 7：推送到远端
+### 步骤 7：确认并推送到远端
+
+**在执行推送前，必须向用户询问确认：**
+
+> 🚀 **即将推送，请确认以下信息：**
+>
+> - 当前分支：`<git branch --show-current 输出>`
+> - 推送目标：`origin/<branch-name>`
+>
+> **是否确认推送？（yes/no）**
+
+用户确认后再执行：
 
 ```bash
 # 当前分支推送
@@ -138,10 +162,11 @@ git push
 git push -u origin <branch-name>
 ```
 
-推送前确认：
-- 当前分支是否正确（`git branch`）
+推送前还需确认：
 - 是否需要先同步最新变更（`git pull --rebase`）
 - 目标分支是否有保护规则（需通过 PR/MR 合并）
+
+若用户拒绝推送，流程在提交完成后结束，不执行推送。
 
 ### 步骤 8：提交后检查
 

@@ -219,3 +219,9 @@ description: Java 开发+评审组合流程 — 在 feature-dev-java 或 bug-fix
 ## 九、后续建议
 - [需要后续跟进的事项，如补充测试、性能优化、监控配置等]
 ```
+
+---
+
+## Git 提交（可选）
+
+> 代码变更完成并通过自检后，可执行 `git-commit` Skill 将变更纳入版本管理。

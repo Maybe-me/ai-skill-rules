@@ -68,3 +68,9 @@ description: Shell 标准脚本开发流程。用于实现 Bash/sh/zsh 脚本、
 
 ### 步骤 7：任务交付文档
 在 `docs/delivery/` 下生成：`docs/delivery/{YYYY-MM-DD-HH-mm-ss}-feature-shell-{脚本简称}.md`
+
+---
+
+## Git 提交（可选）
+
+> 代码变更完成并通过自检后，可执行 `git-commit` Skill 将变更纳入版本管理。

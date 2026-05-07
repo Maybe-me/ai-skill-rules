@@ -75,6 +75,7 @@
 | `dev-review-go-orchestrated` | "拆子任务开发并评审 Go"、"让 subagent 做 Go 开发+review" | `feature-dev-go-orchestrated`/`bug-fix-go` + `code-review-go` | 编排实现或修复 → 独立评审 → 问题修复 → 文档交付 |
 | `remote-deploy` | "部署到远程"、"部署冷钱包" | — | 参数收集 → 编译 → SCP → 部署 online/offline |
 | `greenfield-project` | "从零开始做项目"、"新建项目"、"项目规划"、"搭建新系统" | — | 需求发现 → 整体方案设计（技术栈确定后加载对应语言 Rules） → 方案评审迭代 → 文档输出（架构方案 + 子任务 + 进度跟踪 + 基于 Rules 的编码规范） |
+| `git-commit` | "提交代码"、"git commit"、"写 commit message"、任何 Skill 完成后可选衔接 | — | 变更确认 → 选择性暂存 → Conventional Commits 提交信息编写 → 提交 → 可选推送 |
 
 ### 新增语言 Skill 家族
 

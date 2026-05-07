@@ -58,6 +58,7 @@
 | `skills/*-rust/` | Rust Skill 家族：`requirement-clarify` / `feature-dev` / `bug-fix` / `refactor` / `code-review` / `testing` / `deploy-doc` / `api-doc` / `dev-review` |
 | `skills/*-python/` | Python Skill 家族：`requirement-clarify` / `feature-dev` / `bug-fix` / `refactor` / `code-review` / `testing` / `deploy-doc` / `api-doc` / `dev-review` |
 | `skills/*-shell/` | Shell Skill 家族：`requirement-clarify` / `feature-dev` / `bug-fix` / `refactor` / `code-review` / `testing` / `deploy-doc` / `dev-review` |
+| [`skills/git-commit/SKILL.md`](skills/git-commit/SKILL.md) | Git 提交流程：变更确认、暂存、Conventional Commits 提交信息编写与推送 |
 
 ### 3. Workflows
 

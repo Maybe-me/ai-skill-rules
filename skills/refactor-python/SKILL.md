@@ -59,3 +59,9 @@ description: Python 重构流程。用于在保持行为可控的前提下，调
 
 ### 步骤 6：任务交付文档
 在 `docs/delivery/` 下生成：`docs/delivery/{YYYY-MM-DD-HH-mm-ss}-refactor-python-{模块简称}.md`
+
+---
+
+## Git 提交（可选）
+
+> 代码变更完成并通过自检后，可执行 `git-commit` Skill 将变更纳入版本管理。

@@ -72,3 +72,9 @@ description: Python Bug 修复流程。用于定位和修复 Python 服务、任
 
 ### 步骤 8：任务交付文档
 在 `docs/delivery/` 下生成：`docs/delivery/{YYYY-MM-DD-HH-mm-ss}-bugfix-python-{问题简称}.md`
+
+---
+
+## Git 提交（可选）
+
+> 代码变更完成并通过自检后，可执行 `git-commit` Skill 将变更纳入版本管理。
